@@ -1,0 +1,165 @@
+/* App general */
+.App {
+  text-align: center;
+  background-color: #00c0df;
+  min-height: 100vh;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px;
+  background-color: #fff;
+  height: 100px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky; /* para que quede fija arriba */
+  top: 0;
+  z-index: 1000;
+}
+
+/* Contenedor logo + botones */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* Logo */
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+/* Botones */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links button {
+  background-color: #fdd835;
+  color: #000;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links button:hover {
+  background-color: #e6c200;
+}
+
+/* Lupa */
+.search-button button {
+  background-color: #fdd835;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Texto principal */
+.App h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.App p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: #fff;
+  color: #000;
+  font-size: 0.9rem;
+  border-top: 2px solid #000;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5; /* color gris claro */
+}
+
+/* Contenedor principal */
+#root {
+  padding-top: 20px; /* baja todo el contenido */
+  background-color: #f5f5f5;
+}
+
+/* Header */
+header {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  margin: 0 auto; /* centra el header */
+}
+
+.quienes-somos {
+  animation: fadeIn 1s ease-in-out;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.quienes-somos h1 {
+  color: #232c89;
+  margin-bottom: 30px;
+}
+
+.quienes-somos .card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 15px;
+  border: none; /* sin borde */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.quienes-somos .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.quienes-somos .card-title {
+  color: #232c89;
+  font-weight: bold;
+}
+
+.quienes-somos .card-text {
+  color: #555;
+}
+
+/* Animación fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
