@@ -163,3 +163,27 @@ header {
     transform: translateY(0);
   }
 }
+/* Estilos exclusivos del apartado de contacto */
+.contacto-container {
+  background: white;
+}
+
+.contacto-container h2 {
+  color: #232c89;
+  font-weight: bold;
+}
+
+.contacto-container .btn-primary {
+  background-color: #232c89;
+  border: none;
+  transition: 0.3s;
+}
+
+.contacto-container .btn-primary:hover {
+  background-color: #1b2471;
+}
+
+.contacto-container .form-control:focus {
+  border-color: #232c89;
+  box-shadow: 0 0 5px rgba(35, 44, 137, 0.5);
+}

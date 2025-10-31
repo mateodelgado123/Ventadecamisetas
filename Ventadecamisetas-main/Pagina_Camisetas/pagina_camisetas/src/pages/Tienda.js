@@ -1,22 +1,13 @@
-import React from 'react';
-import Camiseta from '../assets/camiseta.png'; // imagen base
-import '../App.css';
+import React, { useContext } from 'react';
+import camisetas from '../assets/camisetasData';
+import { CarritoContext } from '../context/CarritoContext';
 
 function Tienda() {
-  // Array con 50 camisetas
-  const camisetas = Array.from({ length: 50 }, (_, i) => ({
-    id: i + 1,
-    nombre: `Camiseta ${i + 1}`,
-    precio: (14000 + i * 100).toLocaleString('es-AR', {
-      style: 'currency',
-      currency: 'ARS',
-    }),
-    imagen: Camiseta,
-  }));
+  const { agregarAlCarrito } = useContext(CarritoContext);
 
   return (
     <div className="container mt-4">
-      <h1 className="text-center mb-4"> Tienda de Camisetas</h1>
+      <h1 className="text-center mb-4">Tienda de Camisetas</h1>
       <p className="text-center mb-5">
         Aquí encontrarás todas las camisetas disponibles de T-SHIRT SHOP ROJAS.
       </p>
@@ -29,16 +20,14 @@ function Tienda() {
                 src={camiseta.imagen}
                 alt={camiseta.nombre}
                 className="card-img-top mx-auto mt-3"
-                style={{
-                  maxHeight: '180px',
-                  objectFit: 'contain',
-                  width: 'auto',
-                }}
+                style={{ maxHeight: '180px', objectFit: 'contain', width: 'auto' }}
               />
               <div className="card-body">
                 <h5 className="card-title">{camiseta.nombre}</h5>
                 <p className="card-text">{camiseta.precio}</p>
-                <button className="btn btn-primary">Comprar</button>
+                <button className="btn btn-primary" onClick={() => agregarAlCarrito(camiseta)}>
+                  Comprar
+                </button>
               </div>
             </div>
           </div>
@@ -49,4 +38,3 @@ function Tienda() {
 }
 
 export default Tienda;
-

@@ -6,9 +6,7 @@ function QuienesSomos() {
       <h1 className="fw-bold mb-4">¿Quiénes somos?</h1>
 
       <p className="lead text-muted mb-5">
-        En <span className="text-primary fw-semibold">T-Shirt Shop Rojas</span> nos apasiona el fútbol y la moda. 
-        Nos dedicamos a ofrecer camisetas oficiales y personalizadas de alta calidad, 
-        para que cada hincha pueda llevar con orgullo los colores de su equipo.
+        <span className="text-primary fw-semibold">T-Shirt Shop Rojas</span> es  una pagina de ventas de ropa donde nuestra meta es que cada amante del futbol obtenga la camiseta que quiera a un buen precio
       </p>
 
       <div className="row justify-content-center">
